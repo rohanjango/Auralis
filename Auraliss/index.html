@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Auralis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Auralis</div>
+    <nav>
+      <a href="#"></a>
+      <a href="#">About</a>
+      <a href="#">Resources</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+    <button class="signin">Sign In</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <span class="badge">INTRODUCING</span>
+
+    <h1>Email for<br><span>Developers</span></h1>
+
+    <p>
+      The best way to reach humans instead of the spam folder;
+      deliver transactional and marketing emails at scale.
+    </p>
+
+    <div class="buttons">
+      <button class="btn outline">Documentation →</button>
+      <button class="btn filled">Get Started →</button>
+    </div>
+
+
+    <!-- Audio Upload -->
+<div class="upload-box">
+  <label for="audioUpload" class="upload-btn">
+    Upload Audio
+  </label>
+  <input type="file" id="audioUpload" accept="audio/*" hidden />
+  <span id="fileName">No file selected</span>
+</div>
+
+    <!-- Audio Preview Bar -->
+    <div class="waveform-player">
+  <button id="playBtn">▶</button>
+
+  <div class="waveform" id="waveform">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+</div>
+    <!-- Loading State -->
+<div id="loading" class="loading hidden">
+  Analyzing sound environment...
+</div>
+
+<!-- Dummy AI Response -->
+<div id="result" class="result hidden">
+  <p><strong>📍 Location:</strong> <span id="locationText"></span></p>
+  <p><strong>🧠 Situation:</strong> <span id="situationText"></span></p>
+  <p><strong>🔊 Sound Type:</strong> <span id="classText"></span></p>
+  <p><strong>📊 Confidence:</strong> <span id="confidenceText"></span></p>
+
+</div>
+<!-- Save Button -->
+<button id="saveBtn" class="btn filled">
+  Save to Dashboard
+</button>
+
+
+
+<audio id="audio" src="audio/sample.mp3"></audio>
+
+
+    <audio id="audio" src="audio/sample.mp3"></audio>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

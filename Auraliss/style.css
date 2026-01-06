@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: black;
+  color: white;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.navbar nav a {
+  color: #aaa;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 14px;
+}
+
+.signin {
+  background: #ccc;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  padding: 80px 60px;
+  max-width: 700px;
+}
+
+.badge {
+  border: 1px solid #7f3cff;
+  color: #caa7ff;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 12px;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #eaeaea;
+}
+
+.hero p {
+  color: #aaa;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  padding: 12px 22px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 1px solid #555;
+  color: white;
+}
+
+.btn.filled {
+  background: white;
+  color: black;
+  border: none;
+}
+
+/* Waveform Player */
+.waveform-player {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #0f0f0f;
+  padding: 18px 22px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 480px;
+}
+
+/* Play Button */
+.waveform-player button {
+  background: #ea0f0f;
+  color: white;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Waveform Bars */
+.waveform {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 40px;
+  flex: 1;
+}
+
+.waveform span {
+  width: 4px;
+  height: 10px;
+  background: linear-gradient(180deg, #104fae, #0fe344);
+  border-radius: 4px;
+  animation: wave 1s infinite ease-in-out;
+  animation-play-state: paused;
+}
+
+/* Different delays for realistic motion */
+.waveform span:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+.waveform span:nth-child(even) {
+  animation-delay: 0.4s;
+}
+
+/* Animation */
+@keyframes wave {
+  0% { height: 10px; }
+  50% { height: 38px; }
+  100% { height: 10px; }
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+}
+
+
+/* Loading State */
+.loading {
+  margin-top: 20px;
+  color: #caa7ff;
+  font-size: 14px;
+  animation: pulse 1.2s infinite;
+}
+
+/* Result Box */
+.result {
+  margin-top: 20px;
+  padding: 14px 18px;
+  background: #111;
+  border-left: 3px solid #7f3cff;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+/* Hidden Utility */
+.hidden {
+  display: none;
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+
+/* Audio Upload */
+.upload-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.upload-btn {
+  background: #1f1f1f;
+  color: #caa7ff;
+  border: 1px dashed #7f3cff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+#fileName {
+  font-size: 12px;
+  color: #aaa;
+}
+
+#confidenceText {
+  color: #3cff7d;
+  font-weight: 600;
+}
+
